@@ -1,3 +1,9 @@
+
+/**********************************************************************************************
+ * PROJECT: GUESS THE NUMBER - ISABELVD1
+ **********************************************************************************************/
+
+
 const readline = require('readline');
 const rl = readline.createInterface(process.stdin, process.stdout);
 
@@ -9,7 +15,7 @@ function ask(questionText) {
 }
 reverseStart();
 
-// Function random for a aleatory number
+/// Function random for a aleatory number
 
 function randomNum(min, max) {
   let range = max - min + 1
@@ -22,7 +28,7 @@ function randomNum(min, max) {
 async function reverseStart(){
   let life = 3;
   let compuNumber = randomNum(1,100);
-  console.log(compuNumber);
+  console.log(compuNumber); /// RECUERDA ELIMINAR ESTE 
   console.log("Let's play a game where  the (computer) make up a number and you (human)try to guess it.")
   let secretNumber = await ask("See if you can guess it in: " + life + " tries. \nWhat is your secret number?\nI won't peek, I promise...\n");
    
@@ -41,9 +47,9 @@ async function reverseStart(){
       console.log(" Sorry my number is higter");
       secretNumber = await ask("Please try again: ");
       
-     }// close if
+     }
      life--;
-  }// close while
+  }
     if (life == 0){
       console.log("Sorry. You loose!!")
     }
